@@ -13,6 +13,7 @@
 		FC47F67F2A8D319C00A0C380 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC47F67E2A8D319C00A0C380 /* Preview Assets.xcassets */; };
 		FC47F6862A8D34CF00A0C380 /* RotationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC47F6852A8D34CF00A0C380 /* RotationTransition.swift */; };
 		FC47F6882A8D351400A0C380 /* ScaleTranistion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC47F6872A8D351400A0C380 /* ScaleTranistion.swift */; };
+		FC47F68A2A8E7A2100A0C380 /* ZoomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC47F6892A8E7A2100A0C380 /* ZoomTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		FC47F67E2A8D319C00A0C380 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FC47F6852A8D34CF00A0C380 /* RotationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationTransition.swift; sourceTree = "<group>"; };
 		FC47F6872A8D351400A0C380 /* ScaleTranistion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleTranistion.swift; sourceTree = "<group>"; };
+		FC47F6892A8E7A2100A0C380 /* ZoomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				FC47F67D2A8D319C00A0C380 /* Preview Content */,
 				FC47F6852A8D34CF00A0C380 /* RotationTransition.swift */,
 				FC47F6872A8D351400A0C380 /* ScaleTranistion.swift */,
+				FC47F6892A8E7A2100A0C380 /* ZoomTransition.swift */,
 			);
 			path = CustomTransitions;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				FC47F67A2A8D319900A0C380 /* ContentView.swift in Sources */,
 				FC47F6782A8D319900A0C380 /* CustomTransitionsApp.swift in Sources */,
 				FC47F6862A8D34CF00A0C380 /* RotationTransition.swift in Sources */,
+				FC47F68A2A8E7A2100A0C380 /* ZoomTransition.swift in Sources */,
 				FC47F6882A8D351400A0C380 /* ScaleTranistion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,62 +11,66 @@ struct ContentView: View {
     @State private var isFlipped = false
     @State private var showNextView = false
     @Namespace private var namespace
-
+    
     var body: some View {
-        VStack(spacing: 20) {
-            RotationTransitionExample()
-            ScaleTranistion()
-            Button(showNextView ? "Hide Next View" : "Show Next View") {
-                withAnimation {
-                    showNextView.toggle()
-                }
-            }
-            .frame(width: 200, height: 40)
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(10)
-            .padding()
-
-            ZStack {
-                if showNextView {
-                    Rectangle()
-                        .foregroundColor(.green)
-                        .frame(width: 150, height: 150)
-                        .matchedGeometryEffect(id: "greenRectangle", in: namespace)
-                }
-            }
-            .padding(.bottom, 42)
-
-            ZStack {
-                Rectangle()
-                    .foregroundColor(.red)
-                    .frame(width: 100, height: 100)
-                    .cornerRadius(10)
-                    .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
-                    .offset(y: isFlipped ? -50 : 50)
-                    .opacity(isFlipped ? 1 : 0)
-
-                Rectangle()
-                    .foregroundColor(.blue)
-                    .frame(width: 100, height: 100)
-                    .cornerRadius(10)
-                    .rotation3DEffect(.degrees(isFlipped ? 0 : 180), axis: (x: 0, y: 1, z: 0))
-                    .offset(y: isFlipped ? 50 : -50)
-                    .opacity(isFlipped ? 0 : 1)
-            }
-            
-            Button("Coin Flip Transition") {
-                withAnimation(.easeInOut(duration: 1.0)) {
-                    isFlipped.toggle()
-                }
-            }
-            .frame(width: 200, height: 40)
-            .background(Color.purple)
-            .foregroundColor(.white)
-            .cornerRadius(10)
-            .padding()
-        }
+        ZoomTransition()
     }
+
+//    var body: some View {
+//        VStack(spacing: 20) {
+//            RotationTransitionExample()
+//            ScaleTranistion()
+//            Button(showNextView ? "Hide Next View" : "Show Next View") {
+//                withAnimation {
+//                    showNextView.toggle()
+//                }
+//            }
+//            .frame(width: 200, height: 40)
+//            .background(Color.blue)
+//            .foregroundColor(.white)
+//            .cornerRadius(10)
+//            .padding()
+//
+//            ZStack {
+//                if showNextView {
+//                    Rectangle()
+//                        .foregroundColor(.green)
+//                        .frame(width: 150, height: 150)
+//                        .matchedGeometryEffect(id: "greenRectangle", in: namespace)
+//                }
+//            }
+//            .padding(.bottom, 42)
+//
+//            ZStack {
+//                Rectangle()
+//                    .foregroundColor(.red)
+//                    .frame(width: 100, height: 100)
+//                    .cornerRadius(10)
+//                    .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
+//                    .offset(y: isFlipped ? -50 : 50)
+//                    .opacity(isFlipped ? 1 : 0)
+//
+//                Rectangle()
+//                    .foregroundColor(.blue)
+//                    .frame(width: 100, height: 100)
+//                    .cornerRadius(10)
+//                    .rotation3DEffect(.degrees(isFlipped ? 0 : 180), axis: (x: 0, y: 1, z: 0))
+//                    .offset(y: isFlipped ? 50 : -50)
+//                    .opacity(isFlipped ? 0 : 1)
+//            }
+//            
+//            Button("Coin Flip Transition") {
+//                withAnimation(.easeInOut(duration: 1.0)) {
+//                    isFlipped.toggle()
+//                }
+//            }
+//            .frame(width: 200, height: 40)
+//            .background(Color.purple)
+//            .foregroundColor(.white)
+//            .cornerRadius(10)
+//            .padding()
+//        }
+//    }
 }
 
 
